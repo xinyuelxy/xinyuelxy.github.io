@@ -1,12 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <defs>
-    <linearGradient id="g" x1="18" y1="18" x2="82" y2="82" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#12342a"/>
-      <stop offset=".68" stop-color="#0969da"/>
-      <stop offset="1" stop-color="#c89b3c"/>
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="22" fill="#fffef9"/>
-  <circle cx="50" cy="50" r="34" fill="url(#g)"/>
-  <text x="50" y="59" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#fffef9">XL</text>
+  <text x="7" y="82" font-size="82">🍺</text>
 </svg>
