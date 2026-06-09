@@ -123,94 +123,108 @@ a:focus {
 .nav-identity {
   display: inline-flex;
   align-items: center;
-  max-width: 56%;
+  max-width: 8rem;
   overflow: hidden;
-  font-family: "Fira Sans", sans-serif;
-  font-size: 0.96rem;
-  font-weight: 700;
+  gap: 0.75rem;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.88rem;
+  font-weight: 600;
   letter-spacing: 0;
   color: rgba(255, 255, 255, 0.88) !important;
   white-space: nowrap;
 }
 
-.identity-spark {
+.code-orbit {
   position: relative;
   display: inline-block;
-  width: 0.62rem;
-  height: 0.62rem;
-  margin-right: 0.55rem;
+  width: 1.65rem;
+  height: 1.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 50%;
-  background: var(--accent-gradient);
-  box-shadow: 0 0 0 0 rgba(200, 155, 60, 0.50);
-  animation: spark-pulse 1.8s ease-in-out infinite;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(246, 251, 248, 0.92) 0 0.11rem, transparent 0.12rem),
+    radial-gradient(circle at 45% 28%, rgba(9, 105, 218, 0.78), transparent 0.36rem),
+    radial-gradient(circle at 62% 70%, rgba(200, 155, 60, 0.70), transparent 0.32rem),
+    rgba(255, 255, 255, 0.06);
 }
 
-.identity-name {
-  color: #f6fbf8;
+.code-orbit span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0.25rem;
+  height: 0.25rem;
+  margin: -0.125rem;
+  border-radius: 50%;
+  background: #cfe8d5;
+  animation: orbit-node 4.8s linear infinite;
 }
 
-.identity-rotator {
+.code-orbit span:nth-child(2) {
+  animation-delay: -1.6s;
+  background: #8fbcff;
+}
+
+.code-orbit span:nth-child(3) {
+  animation-delay: -3.2s;
+  background: #e0bd68;
+}
+
+.glyph-stream {
   position: relative;
   display: inline-flex;
-  width: 11.2rem;
+  width: 3.6rem;
   height: 1.35rem;
-  margin-left: 0.75rem;
   overflow: hidden;
-  color: #bfd8c6;
-  font-family: "Source Code Pro", monospace;
-  font-size: 0.82rem;
-  font-weight: 500;
+  color: #d5e5d8;
 }
 
-.identity-rotator span {
+.glyph-stream span {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transform: translateY(65%);
-  animation: identity-cycle 7.5s ease-in-out infinite;
+  transform: translateY(72%);
+  animation: glyph-cycle 8s ease-in-out infinite;
 }
 
-.identity-rotator span:nth-child(2) {
-  animation-delay: 2.5s;
+.glyph-stream span:nth-child(2) {
+  animation-delay: 2s;
 }
 
-.identity-rotator span:nth-child(3) {
-  animation-delay: 5s;
+.glyph-stream span:nth-child(3) {
+  animation-delay: 4s;
 }
 
-@keyframes spark-pulse {
+.glyph-stream span:nth-child(4) {
+  animation-delay: 6s;
+}
+
+@keyframes orbit-node {
   0% {
-    transform: scale(0.92);
-    box-shadow: 0 0 0 0 rgba(200, 155, 60, 0.42);
-  }
-
-  55% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0.45rem rgba(200, 155, 60, 0);
+    transform: rotate(0deg) translateX(0.58rem) rotate(0deg);
   }
 
   100% {
-    transform: scale(0.92);
-    box-shadow: 0 0 0 0 rgba(200, 155, 60, 0);
+    transform: rotate(360deg) translateX(0.58rem) rotate(-360deg);
   }
 }
 
-@keyframes identity-cycle {
+@keyframes glyph-cycle {
   0% {
     opacity: 0;
-    transform: translateY(65%);
+    transform: translateY(72%);
   }
 
-  10%,
-  28% {
+  9%,
+  24% {
     opacity: 1;
     transform: translateY(0);
   }
 
-  38%,
+  34%,
   100% {
     opacity: 0;
-    transform: translateY(-65%);
+    transform: translateY(-72%);
   }
 }
 
@@ -270,35 +284,6 @@ div.lazy {
   margin-top: 0.45rem;
   border-radius: 999px;
   background: var(--accent-gradient);
-}
-
-.name-emoji {
-  display: inline-block;
-  margin-left: 0.2rem;
-  font-size: 0.46em;
-  vertical-align: 28%;
-  transform-origin: 52% 70%;
-  animation: emoji-wobble 4.4s ease-in-out infinite;
-}
-
-@keyframes emoji-wobble {
-  0%,
-  72%,
-  100% {
-    transform: rotate(0deg) scale(1);
-  }
-
-  78% {
-    transform: rotate(-9deg) scale(1.06);
-  }
-
-  84% {
-    transform: rotate(8deg) scale(1.04);
-  }
-
-  90% {
-    transform: rotate(-4deg) scale(1.02);
-  }
 }
 
 .profile-photo {
@@ -424,6 +409,12 @@ main h6::after {
 
 .abstract-links a {
   margin-right: 0.35rem;
+  white-space: nowrap;
+}
+
+.paper-status {
+  color: #6f7780;
+  font-size: 0.82em;
   white-space: nowrap;
 }
 
@@ -650,7 +641,7 @@ main h6::after {
     font-size: 0.9rem;
   }
 
-  .identity-rotator {
+  .glyph-stream {
     display: none;
   }
 
