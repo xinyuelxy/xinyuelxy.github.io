@@ -555,6 +555,10 @@ main h6::after {
   border-top: 1px solid rgba(18, 52, 42, 0.10);
 }
 
+.experience-row-first {
+  border-top: 0 !important;
+}
+
 .experience-year {
   color: #6f786f;
   white-space: nowrap;
