@@ -1,3 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <text x="7" y="82" font-size="82">🍺</text>
+  <defs>
+    <clipPath id="circle">
+      <circle cx="50" cy="50" r="48"/>
+    </clipPath>
+  </defs>
+  <rect width="100" height="100" rx="50" fill="#12342a"/>
+  <image href="assets/bichon-favicon.jpg" x="4" y="0" width="92" height="100" preserveAspectRatio="xMidYMid slice" clip-path="url(#circle)"/>
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#cfe8d5" stroke-width="4"/>
 </svg>

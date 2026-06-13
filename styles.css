@@ -136,10 +136,10 @@ a:focus {
 .lab-mark {
   position: relative;
   display: inline-flex;
-  height: 2.15rem;
+  height: 2.35rem;
   align-items: center;
   gap: 0.72rem;
-  padding: 0.26rem 0.62rem 0.26rem 0.36rem;
+  padding: 0.18rem 0.62rem 0.18rem 0.24rem;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
@@ -162,10 +162,26 @@ a:focus {
 }
 
 .lab-orbit,
+.nav-pet,
 .lab-prompt,
 .lab-meter {
   position: relative;
   z-index: 1;
+}
+
+.nav-pet {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 58%;
+  border: 1px solid rgba(207, 232, 213, 0.45);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.06),
+    0 0 18px rgba(143, 188, 255, 0.24);
+  animation: nav-pet-glow 3.8s ease-in-out infinite;
 }
 
 .lab-orbit {
@@ -318,6 +334,23 @@ a:focus {
   45% {
     opacity: 0.95;
     transform: scaleY(1);
+  }
+}
+
+@keyframes nav-pet-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(255, 255, 255, 0.06),
+      0 0 14px rgba(143, 188, 255, 0.18);
+    transform: translateY(0);
+  }
+
+  48% {
+    box-shadow:
+      0 0 0 2px rgba(255, 255, 255, 0.08),
+      0 0 22px rgba(224, 189, 104, 0.22);
+    transform: translateY(-1px);
   }
 }
 
