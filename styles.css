@@ -817,14 +817,19 @@ main h6::after {
 }
 
 .photo-strip img {
-  width: clamp(12rem, 28vw, 18rem);
-  height: 12.2rem;
+  width: clamp(12rem, 23vw, 15.5rem);
+  height: clamp(12rem, 23vw, 15.5rem);
   flex: 0 0 auto;
   border: 1px solid rgba(18, 52, 42, 0.10);
   border-radius: 0.65rem;
   object-fit: cover;
+  object-position: center;
   scroll-snap-align: start;
   box-shadow: 0 10px 24px rgba(31, 45, 38, 0.10);
+}
+
+.photo-strip img.photo-focus-upper {
+  object-position: center 24%;
 }
 
 .interest-section + .interest-section {
@@ -968,7 +973,7 @@ main h6::after {
   }
 
   .photo-strip img {
-    width: 76vw;
-    height: 12.5rem;
+    width: min(76vw, 20rem);
+    height: min(76vw, 20rem);
   }
 }
