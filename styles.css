@@ -800,6 +800,13 @@ main h6::after {
   color: #6f7780;
 }
 
+.interest-intro {
+  max-width: 46rem;
+  margin-bottom: 1rem;
+  color: #35423a;
+  line-height: 1.55;
+}
+
 .photo-strip {
   display: flex;
   gap: 0.75rem;
