@@ -125,7 +125,7 @@ a:focus {
   align-items: center;
   max-width: 15rem;
   overflow: hidden;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Source Code Pro", monospace;
   font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0;
