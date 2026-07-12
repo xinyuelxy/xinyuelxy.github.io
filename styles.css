@@ -838,6 +838,7 @@ main h6::after {
 }
 
 .award-title {
+  grid-column: 3 / -1;
   line-height: 1.35;
 }
 
